@@ -12,8 +12,6 @@ export default class App extends React.Component {
     }
     this.handleSearch = this.handleSearch.bind(this);
   }
-  
-
 
   handleSearch(evt, search, catergory) {
     evt.preventDefault();
@@ -30,24 +28,16 @@ export default class App extends React.Component {
         });
       });
   }
-    
-    
-  
-  
-  render(){
-    console.log(this.state.findings.results)
+
+  render() {
     return (
       <div className="App">
         <Header />
         <SearchAndFilterField onClick={this.handleSearch} />
-      
-        <ResultView searchResults={this.state.findings.results}/>
+        <ResultView searchResults={this.state.findings.results} />
       </div>
     );
-    
   }
-  
-  
 }
 
 
