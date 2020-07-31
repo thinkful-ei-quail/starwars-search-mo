@@ -3,10 +3,18 @@ import Result from '../Result/Result';
 import './ResultView.css';
 
 export default class ResultView extends React.Component {
-  render() {
-    return <ul>
-      Result list here
-      <Result/>
-    </ul>
+  static defaultProps = { searchResults: [] }
+
+  render() {    
+    const results = this.props.searchResults.map((result, index) => {
+      return <Result key={index} id={index} info={result} />
+    })
+
+    console.log('this is results',results);
+    return (
+      <ul className='results-list'>
+        {results}
+      </ul>
+    )
   }
 }

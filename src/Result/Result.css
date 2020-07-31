@@ -1,0 +1,8 @@
+.result {
+  border: black solid 1px;
+  border-radius: 3px;
+  padding-bottom: 10px;
+  text-align: left;
+  line-height: .3in;
+  margin: 1em 0;
+}
