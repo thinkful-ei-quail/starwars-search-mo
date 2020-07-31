@@ -40,7 +40,7 @@ export default class SearchAndFilterField extends React.Component {
         <label htmlFor='search-filter'>Catergory:</label>
         <select name="search-filter" size="1" onChange={this.handleCatergory}>
           {catergoryOptions.map((catergory, idx) =>
-            <option key={idx.id} value={catergory}>{catergory.charAt(0).toUpperCase() + catergory.slice(1)}</option>
+            <option key={idx} value={catergory}>{catergory.charAt(0).toUpperCase() + catergory.slice(1)}</option>
           )}
         </select>
         {/* Search Button */}

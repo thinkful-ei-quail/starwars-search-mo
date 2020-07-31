@@ -10,11 +10,11 @@ export default class Result extends React.Component {
 
     
     return (
-      <li className='result' key = {this.props.key }>
-        {Object.keys(this.props.info).map(key => {
+      <li className='result' key = {this.props.id}>
+        {Object.keys(this.props.info).map((key, idx) => {
           const keyField = key.toUpperCase().split('_')
           return (
-            <div >
+            <div key={idx}>
               {keyField}: {this.props.info[key]}
             </div>
           )

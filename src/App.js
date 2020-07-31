@@ -15,8 +15,6 @@ export default class App extends React.Component {
 
   handleSearch(evt, search, catergory) {
     evt.preventDefault();
-    console.log('Please Work');
-    console.log(search, catergory);
     const url = `https://swapi-thinkful.herokuapp.com/api/${catergory}/?search=${search}`;
 
     fetch(url)
