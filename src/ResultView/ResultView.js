@@ -9,8 +9,6 @@ export default class ResultView extends React.Component {
     const results = this.props.searchResults.map((result, index) => {
       return <Result key={index} id={index} info={result} />
     })
-
-    console.log('this is results',results);
     return (
       <ul className='results-list'>
         {results}
